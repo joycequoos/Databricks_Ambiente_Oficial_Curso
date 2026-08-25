@@ -2,7 +2,7 @@
 
 1) Criar o Catalog: curso_databricks,
 2) Criar o Schema: curso_databricks.aula
-3) 3) Criar o Volume: curso_databricks.aula.aula_volume
+3) Criar o Volume: curso_databricks.aula.aula_volume
  
   <img width="784" height="414" alt="image" src="https://github.com/user-attachments/assets/1c88e010-1391-4a4d-ac3e-fc4ec7bffafa" />
 
