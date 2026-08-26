@@ -23,6 +23,9 @@
 Vamos pegar os dados, transformar e salvar em tabelas, em arquivos de outros formatos, com isso entenderemos essa manipulacao de arquivos dentro do Databricks
 
 https://github.com/joycequoos/Databricks_Ambiente_Oficial_Curso/blob/main/01.Primeiros%20comandos.py
+
+<img width="727" height="575" alt="image" src="https://github.com/user-attachments/assets/47eb55d7-5475-4680-90c1-14933fc7bc0f" />
+
   
 
   
