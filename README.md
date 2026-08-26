@@ -8,6 +8,8 @@
 
   <img width="360" height="489" alt="image" src="https://github.com/user-attachments/assets/4daa00d3-85f2-419f-91cf-259dc0ce38e5" />
 
+  https://github.com/joycequoos/Databricks_Ambiente_Oficial_Curso/blob/main/01.Criando%20Schema%20e%20Volume.py
+
   # Importando Arquivos para Volumes
 
 1) Selecionar o arquivo e arrastar em volume já funciona
