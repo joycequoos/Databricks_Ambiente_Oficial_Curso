@@ -18,7 +18,7 @@
 
 <img width="825" height="564" alt="image" src="https://github.com/user-attachments/assets/5db0e576-9cb1-4725-89a9-941db5131786" />
 
-
+Vamos pegar os dados, transformar e salvar em tabelas, em arquivos de outros formatos, com isso entenderemos essa manipulacao de arquivos dentro do Databricks
 
 
   
