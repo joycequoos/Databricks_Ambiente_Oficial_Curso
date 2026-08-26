@@ -14,6 +14,11 @@
 
 <img width="977" height="462" alt="image" src="https://github.com/user-attachments/assets/2b18699c-a20e-4148-b581-6733cb46c8af" />
 
+2) Volumes criados
+
+<img width="825" height="564" alt="image" src="https://github.com/user-attachments/assets/5db0e576-9cb1-4725-89a9-941db5131786" />
+
+
 
 
   
