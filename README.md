@@ -21,6 +21,17 @@ Repositório de apoio para o curso oficial de **Databricks**, reunindo notebooks
 
 Este repositório documenta, passo a passo, a configuração de um ambiente oficial do Databricks para fins de estudo, cobrindo desde a criação da estrutura de dados (Catalog → Schema → Volume) até a criação de tabelas Delta, leitura/escrita de arquivos e manipulação de DataFrames via **PySpark** e **SQL**.
 
+### O que é Lakehouse?
+
+O **Lakehouse** é uma arquitetura de dados que une o melhor de dois mundos:
+
+- O **baixo custo e a flexibilidade** de um Data Lake (armazenamento de qualquer tipo de dado — estruturado, semiestruturado ou não estruturado — em larga escala e a baixo custo);
+- Com a **confiabilidade, governança e performance** de um Data Warehouse (transações ACID, schema enforcement, indexação e consultas SQL otimizadas).
+
+Na prática, isso é possível graças ao **Delta Lake**, camada que adiciona um log de transações sobre arquivos Parquet, permitindo que o mesmo repositório de dados seja usado tanto para engenharia de dados e Machine Learning quanto para BI e relatórios — sem a necessidade de duplicar dados entre um Data Lake e um Data Warehouse separados.
+
+O Databricks é a plataforma que implementa essa arquitetura, unificando em um único ambiente o armazenamento, o processamento (via Apache Spark) e o consumo dos dados.
+
 ---
 
 ## 1. Estrutura do Ambiente: Catalog, Schema e Volume
