@@ -91,6 +91,17 @@ https://www.kaggle.com
 
 ### Criando Tabelas
 
+https://github.com/joycequoos/Databricks_Ambiente_Oficial_Curso/blob/main/02.%20Criando%20primeiras%20tabelas.py
+
+- Tratamento de Dados
+
+<img width="740" height="231" alt="image" src="https://github.com/user-attachments/assets/9ee325f6-0f43-4d8e-bfcd-008845766756" />
+
+
+
+
+
+
   
 
 
