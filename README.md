@@ -89,7 +89,7 @@ https://www.kaggle.com
 
 <img width="1546" height="350" alt="image" src="https://github.com/user-attachments/assets/aa2d38a0-f0e5-48d0-9a1f-e13630b26085" />
 
-
+### Criando Tabelas
 
   
 
