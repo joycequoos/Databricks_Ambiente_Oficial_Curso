@@ -1,130 +1,143 @@
-# Databricks Ambiente Oficial Curso
+# 🧱 Databricks — Ambiente Oficial do Curso
 
-1) Criar o Catalog: curso_databricks,
-2) Criar o Schema: curso_databricks.aula
-3) Criar o Volume: curso_databricks.aula.aula_volume
- 
-  <img width="784" height="414" alt="image" src="https://github.com/user-attachments/assets/1c88e010-1391-4a4d-ac3e-fc4ec7bffafa" />
+Repositório de apoio para o curso oficial de **Databricks**, reunindo notebooks, exemplos práticos e anotações sobre a criação e manipulação do ambiente Lakehouse: Catalogs, Schemas, Volumes, DataFrames, Delta Lake e tabelas.
 
-  <img width="360" height="489" alt="image" src="https://github.com/user-attachments/assets/4daa00d3-85f2-419f-91cf-259dc0ce38e5" />
+---
 
-  https://github.com/joycequoos/Databricks_Ambiente_Oficial_Curso/blob/main/01.Criando%20Schema%20e%20Volume.py
+## 📑 Sumário
 
-  # Importando Arquivos para Volumes
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [Estrutura do Ambiente](#1-estrutura-do-ambiente-catalog-schema-e-volume)
+- [Importando Arquivos para Volumes](#2-importando-arquivos-para-volumes)
+- [Manipulando DataFrames no Databricks](#3-manipulando-dataframes-no-databricks)
+- [Dados Públicos para Treino](#4-dados-públicos-para-treino)
+- [Criando Tabelas](#5-criando-tabelas)
+- [Notebooks do Repositório](#-notebooks-do-repositório)
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
 
-1) Selecionar o arquivo e arrastar em volume já funciona
+---
 
-<img width="977" height="462" alt="image" src="https://github.com/user-attachments/assets/2b18699c-a20e-4148-b581-6733cb46c8af" />
+## 📌 Sobre o Projeto
 
-2) Volumes criados
+Este repositório documenta, passo a passo, a configuração de um ambiente oficial do Databricks para fins de estudo, cobrindo desde a criação da estrutura de dados (Catalog → Schema → Volume) até a criação de tabelas Delta, leitura/escrita de arquivos e manipulação de DataFrames via **PySpark** e **SQL**.
 
-<img width="825" height="564" alt="image" src="https://github.com/user-attachments/assets/5db0e576-9cb1-4725-89a9-941db5131786" />
+---
 
-Vamos pegar os dados, transformar e salvar em tabelas, em arquivos de outros formatos, com isso entenderemos essa manipulacao de arquivos dentro do Databricks
+## 1. Estrutura do Ambiente: Catalog, Schema e Volume
 
-https://github.com/joycequoos/Databricks_Ambiente_Oficial_Curso/blob/main/01.Primeiros%20comandos.py
+Primeiro passo do curso: criar a hierarquia de organização de dados no Unity Catalog.
 
-<img width="727" height="575" alt="image" src="https://github.com/user-attachments/assets/47eb55d7-5475-4680-90c1-14933fc7bc0f" />
+| Etapa | Objeto criado |
+|-------|----------------|
+| 1 | Catalog: `curso_databricks` |
+| 2 | Schema: `curso_databricks.aula` |
+| 3 | Volume: `curso_databricks.aula.aula_volume` |
 
-- Executando comandos dbutils
+📓 Notebook: [`01.Criando Schema e Volume.py`](./01.Criando%20Schema%20e%20Volume.py)
 
-<img width="712" height="246" alt="image" src="https://github.com/user-attachments/assets/2d7402c8-5f8b-49e2-859f-25878c1091c7" />
+---
 
-- Utilizando comando display para deixar mais amigavel a visualizacao dos dados
+## 2. Importando Arquivos para Volumes
 
-<img width="707" height="402" alt="image" src="https://github.com/user-attachments/assets/ea68994b-bae3-4408-a423-5040ef176b0f" />
+Como carregar arquivos diretamente para dentro de um Volume do Databricks.
 
-- Verificando dentro da pasta Bike Sore
+- Seleção e arraste (drag-and-drop) de arquivos direto para o Volume.
+- Verificação dos Volumes criados na interface do Catalog.
 
-<img width="1196" height="552" alt="image" src="https://github.com/user-attachments/assets/f6dc0dc2-8800-48da-9334-169957277461" />
+📓 Notebook: [`01.Primeiros comandos.py`](./01.Primeiros%20comandos.py)
 
-- Lendo um arquivo, diretamente do diretorio
+Nessa etapa também são explorados:
 
-<img width="1200" height="461" alt="image" src="https://github.com/user-attachments/assets/c68124d2-8d82-40b7-8f0d-677291ce0e69" />
+- Execução de comandos `dbutils` (utilitários do Databricks para manipulação de arquivos e segredos).
+- Uso do comando `display()` para visualização amigável dos dados.
+- Navegação em diretórios (ex.: pasta *Bike Store*).
+- Leitura direta de arquivos a partir do diretório.
+- Uso do modo `display` para inspeção dos dados carregados.
 
-- Utilizando o modo Display
+---
 
-<img width="1218" height="499" alt="image" src="https://github.com/user-attachments/assets/dc03fd87-ba8d-4ba1-bacc-477990d7f687" />
+## 3. Manipulando DataFrames no Databricks
 
-### Manipulando Dataframe Databricks
+Um **DataFrame** no Databricks é uma estrutura de dados bidimensional e distribuída, organizada em colunas nomeadas e tipadas — semelhante a uma tabela relacional ou a uma planilha do Excel.
 
-Um DataFrame no Databricks é uma estrutura de dados bidimensional distribuída, organizada em colunas com nomes e tipos definidos, similar a uma tabela de banco de dados relacional ou a uma planilha do Excel.
+No ecossistema Databricks, construído sobre o **Apache Spark**, os DataFrames são a principal abstração para processamento de dados em larga escala (*Big Data*).
 
-No ecossistema do Databricks, que é construído sobre o Apache Spark, os DataFrames são a principal abstração para manipulação e processamento de dados em grande escala (Big Data).
+### Exemplo de uso (PySpark vs. SQL)
 
-Exemplo de Uso (PySpark vs. SQL)
-No Databricks, você pode criar e consultar DataFrames facilmente usando Python ou SQL diretamente nos Notebooks:
+O mesmo DataFrame pode ser criado e consultado tanto em **Python (PySpark)** quanto em **SQL**, diretamente nos Notebooks — o que reforça a flexibilidade do ambiente para times com diferentes perfis técnicos.
 
-Criando e filtrando em Python (PySpark):
+- Criação e filtragem em **PySpark**.
+- Consulta equivalente do mesmo DataFrame em **SQL**.
+- Leitura de dados utilizando a arquitetura do **Spark**.
 
-<img width="723" height="260" alt="image" src="https://github.com/user-attachments/assets/d4ab4391-7274-42e9-9ea0-7b7caa9ec086" />
+---
 
-- Consultando o mesmo dataframe em SQL
+## 4. Dados Públicos para Treino
 
-<img width="749" height="274" alt="image" src="https://github.com/user-attachments/assets/a9d56984-7d54-4914-bc35-5e4fa886e64e" />
+Fontes de dados públicos recomendadas para praticar os conceitos do curso:
 
-Aqui vamos estar utilizando a arquitetura do Spark, lendo dados com spark
+- **Kaggle** — [kaggle.com](https://www.kaggle.com)
+- **Datasets nativos do Databricks** — conjuntos de dados de exemplo disponibilizados pela própria plataforma, prontos para uso sem necessidade de upload manual.
 
-<img width="1200" height="419" alt="image" src="https://github.com/user-attachments/assets/4a680dc6-0376-450f-8b8d-7e1e5e52cf21" />
+Tópicos abordados:
 
-### Dados Públicos Para Treino databricks+datasets+kaggle
+- Onde encontrar e listar os datasets disponíveis.
+- Leitura de um dataset de exemplo.
+- Leitura de arquivos a partir de um Dataset nativo do Databricks.
+- Leitura e escrita de arquivos em um diretório.
 
-<img width="711" height="223" alt="image" src="https://github.com/user-attachments/assets/0b6b54b3-322a-4eab-a60d-9b79a6f63332" />
+---
 
-https://www.kaggle.com
+## 5. Criando Tabelas
 
-- Datasets que o próprio Databricks deixa disponivel para trabalhar:
+📓 Notebook: [`02. Criando primeiras tabelas.py`](./02.%20Criando%20primeiras%20tabelas.py)
 
-  <img width="1192" height="614" alt="image" src="https://github.com/user-attachments/assets/b9e2740d-41a9-49f9-b596-a64f158d3b09" />
+### Tratamento de Dados
 
-- Lendo um dataset
+Etapa de limpeza e preparação dos dados antes da criação das tabelas.
 
-<img width="1204" height="377" alt="image" src="https://github.com/user-attachments/assets/48b452ed-6e7f-468d-8155-9b69020cb31a" />
+### 🔺 Delta Lake
 
-- Lendo um arquivo de um Dataset do Databricks
+O formato **Delta (Delta Lake)** é uma camada de armazenamento open source construída sobre arquivos **Parquet**.
 
-<img width="1206" height="672" alt="image" src="https://github.com/user-attachments/assets/32198b7f-1b1c-4a6c-80a5-4abf2b1f25d8" />
+> Em resumo: se o Parquet é um formato colunar altamente eficiente, o Delta é o Parquet combinado com um **Log de Transações em JSON** (`_delta_log`). É essa camada de log que transforma pastas de arquivos soltos na nuvem em **tabelas estruturadas, transacionais e inteligentes**.
 
-- Lendo e escrevendo arquivos em um diretório
+Antes do Delta, os Data Lakes tradicionais sofriam com:
 
-<img width="1546" height="350" alt="image" src="https://github.com/user-attachments/assets/aa2d38a0-f0e5-48d0-9a1f-e13630b26085" />
+- Arquivos corrompidos por falhas de escrita;
+- Leituras inconsistentes durante a chegada de novos dados;
+- Incapacidade de atualizar ou deletar registros individuais.
 
-### Criando Tabelas
+O Delta Lake resolveu esses problemas e popularizou a arquitetura **Data Lakehouse**.
 
-https://github.com/joycequoos/Databricks_Ambiente_Oficial_Curso/blob/main/02.%20Criando%20primeiras%20tabelas.py
+### Operações abordadas
 
-- Tratamento de Dados
+- Leitura de tabelas via **SQL**.
+- Criação e remoção (`DROP`) de Schemas.
+- Remoção (`DROP`) de Tabelas.
 
-<img width="740" height="231" alt="image" src="https://github.com/user-attachments/assets/9ee325f6-0f43-4d8e-bfcd-008845766756" />
+---
 
-O formato Delta (ou Delta Lake) é uma camada de armazenamento de código aberto (open format) construída sobre arquivos Parquet.  Em termos simples: se o Parquet é um arquivo de dados colunar muito eficiente, o Delta é o Parquet combinado com um Log de Transações JSON (_delta_log). É essa camada de log que transforma pastas de arquivos soltos na nuvem em tabelas estruturadas, transacionais e inteligentes.
+## 📂 Notebooks do Repositório
 
-Antes do Delta, os Data Lakes tradicionais sofriam com arquivos corrompidos por falhas de escrita, leituras inconsistentes enquanto novos dados entravam e a incapacidade de atualizar/deletar registros individuais. O Delta resolveu esses problemas e popularizou a arquitetura Data Lakehouse.
+| Notebook | Descrição |
+|----------|-----------|
+| [`01.Criando Schema e Volume.py`](./01.Criando%20Schema%20e%20Volume.py) | Criação do Catalog, Schema e Volume |
+| [`01.Primeiros comandos.py`](./01.Primeiros%20comandos.py) | Primeiros comandos, `dbutils`, `display()` e leitura de arquivos |
+| [`02. Criando primeiras tabelas.py`](./02.%20Criando%20primeiras%20tabelas.py) | Criação de tabelas, tratamento de dados e Delta Lake |
 
-<img width="706" height="436" alt="image" src="https://github.com/user-attachments/assets/f0e7bd90-bdc9-40ca-910f-f4a0dcf11d4d" />
+---
 
-<img width="739" height="239" alt="image" src="https://github.com/user-attachments/assets/18e1330a-89ae-4e0d-a07a-ea55a36f2fff" />
+## 🛠️ Tecnologias Utilizadas
 
-<img width="352" height="578" alt="image" src="https://github.com/user-attachments/assets/0bc23e3c-eb6b-4b97-a7b3-f5ec41ac18fe" />
+- **Databricks** (Unity Catalog, Volumes, Notebooks)
+- **Apache Spark** / **PySpark**
+- **SQL**
+- **Delta Lake**
+- **Kaggle Datasets**
 
-- Lendo a tabela via SQL
+---
 
-<img width="1257" height="530" alt="image" src="https://github.com/user-attachments/assets/3397403b-69fe-4eaf-a0c4-8d6f43f9d1c1" />
+## 👩‍💻 Autoria
 
-
-- Criando schemas e dropando
-
-<img width="1278" height="623" alt="image" src="https://github.com/user-attachments/assets/4509deb0-0dc5-4653-80e7-952190349a40" />
-
-- Dropando as tabelas
-
-<img width="1265" height="274" alt="image" src="https://github.com/user-attachments/assets/8c47f5a9-3d1e-4074-adf4-6415354fed51" />
-
-  
-  
-
-
-
-  
-
-
+Repositório mantido por [**joycequoos**](https://github.com/joycequoos) como material de apoio ao curso oficial de Databricks.
