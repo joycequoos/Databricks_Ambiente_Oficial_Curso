@@ -46,6 +46,26 @@ https://github.com/joycequoos/Databricks_Ambiente_Oficial_Curso/blob/main/01.Pri
 
 <img width="1218" height="499" alt="image" src="https://github.com/user-attachments/assets/dc03fd87-ba8d-4ba1-bacc-477990d7f687" />
 
+### Manipulando Dataframe Databricks
+
+Um DataFrame no Databricks é uma estrutura de dados bidimensional distribuída, organizada em colunas com nomes e tipos definidos, similar a uma tabela de banco de dados relacional ou a uma planilha do Excel.
+
+No ecossistema do Databricks, que é construído sobre o Apache Spark, os DataFrames são a principal abstração para manipulação e processamento de dados em grande escala (Big Data).
+
+Exemplo de Uso (PySpark vs. SQL)
+No Databricks, você pode criar e consultar DataFrames facilmente usando Python ou SQL diretamente nos Notebooks:
+
+Criando e filtrando em Python (PySpark):
+
+<img width="723" height="260" alt="image" src="https://github.com/user-attachments/assets/d4ab4391-7274-42e9-9ea0-7b7caa9ec086" />
+
+- Consultando o mesmo dataframe em SQL
+
+<img width="749" height="274" alt="image" src="https://github.com/user-attachments/assets/a9d56984-7d54-4914-bc35-5e4fa886e64e" />
+
+Aqui vamos estar utilizando a arquitetura do Spark, lendo dados com spark
+
+<img width="1200" height="419" alt="image" src="https://github.com/user-attachments/assets/4a680dc6-0376-450f-8b8d-7e1e5e52cf21" />
 
 
 
