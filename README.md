@@ -67,8 +67,27 @@ Aqui vamos estar utilizando a arquitetura do Spark, lendo dados com spark
 
 <img width="1200" height="419" alt="image" src="https://github.com/user-attachments/assets/4a680dc6-0376-450f-8b8d-7e1e5e52cf21" />
 
+### Dados Públicos Para Treino databricks+datasets+kaggle
 
+<img width="711" height="223" alt="image" src="https://github.com/user-attachments/assets/0b6b54b3-322a-4eab-a60d-9b79a6f63332" />
 
+https://www.kaggle.com
+
+- Datasets que o próprio Databricks deixa disponivel para trabalhar:
+
+  <img width="1192" height="614" alt="image" src="https://github.com/user-attachments/assets/b9e2740d-41a9-49f9-b596-a64f158d3b09" />
+
+- Lendo um dataset
+
+<img width="1204" height="377" alt="image" src="https://github.com/user-attachments/assets/48b452ed-6e7f-468d-8155-9b69020cb31a" />
+
+- Lendo um arquivo de um Dataset do Databricks
+
+<img width="1206" height="672" alt="image" src="https://github.com/user-attachments/assets/32198b7f-1b1c-4a6c-80a5-4abf2b1f25d8" />
+
+- Lendo e escrevendo arquivos em um diretório
+
+<img width="1546" height="350" alt="image" src="https://github.com/user-attachments/assets/aa2d38a0-f0e5-48d0-9a1f-e13630b26085" />
 
 
 
