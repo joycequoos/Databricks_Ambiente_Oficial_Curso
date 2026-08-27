@@ -26,7 +26,31 @@ https://github.com/joycequoos/Databricks_Ambiente_Oficial_Curso/blob/main/01.Pri
 
 <img width="727" height="575" alt="image" src="https://github.com/user-attachments/assets/47eb55d7-5475-4680-90c1-14933fc7bc0f" />
 
-  
+- Executando comandos dbutils
+
+<img width="712" height="246" alt="image" src="https://github.com/user-attachments/assets/2d7402c8-5f8b-49e2-859f-25878c1091c7" />
+
+- Utilizando comando display para deixar mais amigavel a visualizacao dos dados
+
+<img width="707" height="402" alt="image" src="https://github.com/user-attachments/assets/ea68994b-bae3-4408-a423-5040ef176b0f" />
+
+- Verificando dentro da pasta Bike Sore
+
+<img width="1196" height="552" alt="image" src="https://github.com/user-attachments/assets/f6dc0dc2-8800-48da-9334-169957277461" />
+
+- Lendo um arquivo, diretamente do diretorio
+
+<img width="1200" height="461" alt="image" src="https://github.com/user-attachments/assets/c68124d2-8d82-40b7-8f0d-677291ce0e69" />
+
+- Utilizando o modo Display
+
+<img width="1218" height="499" alt="image" src="https://github.com/user-attachments/assets/dc03fd87-ba8d-4ba1-bacc-477990d7f687" />
+
+
+
+
+
+
 
   
 
