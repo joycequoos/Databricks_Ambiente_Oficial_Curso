@@ -97,8 +97,31 @@ https://github.com/joycequoos/Databricks_Ambiente_Oficial_Curso/blob/main/02.%20
 
 <img width="740" height="231" alt="image" src="https://github.com/user-attachments/assets/9ee325f6-0f43-4d8e-bfcd-008845766756" />
 
+O formato Delta (ou Delta Lake) é uma camada de armazenamento de código aberto (open format) construída sobre arquivos Parquet.  Em termos simples: se o Parquet é um arquivo de dados colunar muito eficiente, o Delta é o Parquet combinado com um Log de Transações JSON (_delta_log). É essa camada de log que transforma pastas de arquivos soltos na nuvem em tabelas estruturadas, transacionais e inteligentes.
+
+Antes do Delta, os Data Lakes tradicionais sofriam com arquivos corrompidos por falhas de escrita, leituras inconsistentes enquanto novos dados entravam e a incapacidade de atualizar/deletar registros individuais. O Delta resolveu esses problemas e popularizou a arquitetura Data Lakehouse.
+
+<img width="706" height="436" alt="image" src="https://github.com/user-attachments/assets/f0e7bd90-bdc9-40ca-910f-f4a0dcf11d4d" />
+
+<img width="739" height="239" alt="image" src="https://github.com/user-attachments/assets/18e1330a-89ae-4e0d-a07a-ea55a36f2fff" />
+
+<img width="352" height="578" alt="image" src="https://github.com/user-attachments/assets/0bc23e3c-eb6b-4b97-a7b3-f5ec41ac18fe" />
+
+- Lendo a tabela via SQL
+
+<img width="1257" height="530" alt="image" src="https://github.com/user-attachments/assets/3397403b-69fe-4eaf-a0c4-8d6f43f9d1c1" />
 
 
+- Criando schemas e dropando
+
+<img width="1278" height="623" alt="image" src="https://github.com/user-attachments/assets/4509deb0-0dc5-4653-80e7-952190349a40" />
+
+- Dropando as tabelas
+
+<img width="1265" height="274" alt="image" src="https://github.com/user-attachments/assets/8c47f5a9-3d1e-4074-adf4-6415354fed51" />
+
+  
+  
 
 
 
